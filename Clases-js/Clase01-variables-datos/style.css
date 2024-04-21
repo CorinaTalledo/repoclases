@@ -1,0 +1,112 @@
+
+/* 
+
+- Para chequear si la pagina anda se puede poner "alert(“hola”)" en js. Al abrir el html deberia aparecer un mensajito, como una ventanita.
+
+- Datos: Porciones de informacion
+
+- Variables: 
+    - Declarar una variable: Es darle un nombre.
+        Ej: var nombre = 'Sofia'
+            var: Es la variable y le estamos dando el nombre "nombre".
+            'Sofia': Es el valor.
+
+            La variable var ya no se usa.
+
+    - El nombre de la variable es lo que se va a utilizar para llamarlo y darle uso.
+
+    - PALABRAS RESERVADAS: Son palabras especificas para js.
+        - let: es una variable cuyo valor puede cambiar.
+            Ej: let apellido = 'Ferrer'
+
+        - const: es una constante y su valor no cambia.
+            Ej: const mensaje = 'deja tu mensaje'.
+
+    - Como nombrar a las variables:
+        - Empiezan siempre con minuscula
+        - Pueden tener numeros
+        - Conviene evitar caracteres especiales
+        - Se puede usar camelcase. Ej: nombreEmpleado.
+        - Se puede usar tambien upper snake case. Ej: nombre:empleado.
+
+    - Asignacion de la variable:
+        - Es darle un valor.
+        - Se asignan con el = y el valor entre ''.
+
+    - Como mostrar el resultado de lo que se escribio en js:
+        - console.log()
+            - Ej: console.log(apellido): Esto, en la consola del navegador se vera el resultado.
+
+    - Entorno de ejecucion de un programa: Un espacio que va a interpretar y hacer funcionar js.
+        1) El navegador: Chrome, brave, etc.
+        2) Note: Lo vemos mas adelante.
+
+
+- TIPOS DE DATOS:
+    - Dato: Porcion de informacion
+
+        Ej: let uno = 1
+            let dos = '1'
+
+    - DATOS PRIMITIVOS (los principales).
+        - String: Cadena de caracteres (pueden ser numeros y caracteres especiales como @-_, etc.)
+        - Numeros: Son usados para los numeros que van a ser utilizados con fines matematicos, como edad, para hacer control de stock. DNI, numero de telefono, etc son string.
+        - Bulleanos: Datos que pueden ser verdaderos o falsos como un checklist
+        - Null: Valor nulo
+        - Undefine: Cuando hay una variable declarada pero no tiene valor.
+        - NaN: Not a number.
+
+    - Se usan '' (comillas simples) para darle valor a la variable cuando queremos que sea string. Si queremos que sea un numero matematico, como algo para multiplicar, sumar, etc, no se deben poner las comillas.
+    - Si ponemos por ejemplo let nombre '"Corina"', en la consola se va a mostrar "Corina", con las comillas.
+
+
+- DATOS DINAMICOS(contrario a hardcodeado, o sea a la fuerza): Valores que pueden cambiarse, modificarse.
+
+        Ej dato hardcodeado: 
+            let nombre = 'Sofia'
+            let apellido = 'Ferrer'
+            let age = 32.
+        
+            Al hacer el console log, se va a mostrar exactamente estos valores.
+
+
+        Para hacer que se muestren todos los valores se usan datos dinamicos.
+            
+        Ej dato dinamjico:
+                let nombre = prompt('Ingresa tu nombre', 'nombre') >>
+
+                    - prompt: es lo que habilita un espacio en donde el usuario puede escribir, como un input.
+                    - 'nombre' seria lo que aparece dentro del cuadradito a rellenar, seria como el placeholder.
+
+                let apellido = prompt('Ingresa tu apellido', 'apellido')
+                let age = prompt('Ingresa tu edad', 'age')
+
+            Para ver el resultado de esos datos ingresados se pone:
+                
+                alert(`Hola ${name}`) >>
+                    - Con alt + 96 abrimos estas comillas `. Eso habilita poner el texto que va a aparecer en el prompt(cuadradito que salta en el navegador).
+                    - El signo ${} hace que al poner "name" en el prompt no aparezca la palabra "name", sino que llama a la variable que denominamos "name". Es decir que aparecera el nombre de la persona.
+
+
+    Ej:
+        let primerNumero = prompt('ingrese un numero', '')
+        let segundoNumero = prompt('ingrese un numero para ser sumado', '')
+
+        let resultado = Number(primerNumero) - Number(segundoNumero);
+
+        alert(`El resultado es ${resultado}`)
+
+
+    Cohersion de datos: Cuando hay un error en la sintaxis y le da un valor que no era. Como si quisiera sumar peras con manzanas.
+
+    Para decirle que me tome los numeros como numeros y no como string diciendo hay que ponerle al resultado el tipo de dato: let resultado = NUMBER(primerNumero) + NUMBER(segundoNumero)
+
+*/
+
+
+
+
+
+
+
+

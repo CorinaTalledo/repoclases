@@ -1,0 +1,137 @@
+/* 
+CICLO DE VIDA DE LOS COMPONENTES EN REACT >> Es como construir una casa. 
+    1) MONTAJE
+        - Se asientan las bases (paredes, techo, etc).
+        - En react es cuando la aplicacion se carga. No cuando se lee el codigo ni cuando hace una funcion sino cuando se muestra el componente en el html.
+        - Las funciones que crean el montaje son por ejemplo el fetch para el uso de las apis, el boton que muestra una api, que carga un nuevo elemento.
+        - Esta compuesto por el constructor (donde se inicializan los estados y se establecen las props) y el render.
+
+
+    2) ACTUALIZACION
+        - Se agrega un cuarto, una parrilla, se pinta, etc.
+        - En react es cuando se produce un cambio en el componente, por ejemplo el contador inicial de react cuando se suma o resta algo.
+        - La funcion que actualiza podria ser por ejemplo un boton de + y - en un ecommerce para actualizar las cantidades que se estan por comprar y que ese boton tambien actualiza el dinero total que se va a pagar.
+        - Esta compuesto por el shouldCOmponentUpdate (determina si el componente debe volver a mostrarse), render (vuelve a renderizar) y el componentDidUpdate (se llama despues de que el componente se actualizo)
+
+
+    3) DESMONTAJE:
+        - Cuando la casa se derriba.
+        - En react es cuando se deja de ver el componente, cuando ya no es necesario. Por ejemplo cuando se cambia la vista de la app.
+        - La funcion que desmonta podria ser un boton que corte la ejecucion. Por lo general es para limpiar un proceso.
+        - Esta compuesto por el componentWillUnmount (se llama justo antes de que el componente se retire del dom)
+
+
+USE EFFECT >> Es un hook que permite hacer algo una vez que el componente ya fue montado, actualizado o desmontado. Es decir puede trabajar en cualquiera de los 3 ciclos.
+
+    - Como usarlo?
+        1) Lo importamos al componente para poder utilizarlo (como el useState).
+
+        2) UseEffect recibe 2 parametros: la funcion que tiene que ejecutar y un array de las dependencias que va a usar (la cantidad necesaria).
+            - EN MONTAJE: El segundo parametro va a ir vacio, no tiene que prestarle atencion a nada ya que es cuando esta empezando.
+            - EN ACTUALIZACION: En el segundo parametro se debe poner lo que queremos que se actualice en caso de que lo que dice el useEffect sea verdadero.
+            - EN DESMONTAJE: 
+
+------------------------------------------------------
+
+RUTEO: Como react trabaja todo sobre una misma pagina, para poder crear las distintas rutas (como ser /home, /about, /contact, etc.) es necesario instalar una nueva dependencia al proyecto. Esta creara las distintas rutas que deseemos.
+
+    INSTALAR: Abrir la consola y poner "npm install react-router-dom" >> https://reactrouter.com/en/main/start/overview
+
+    UNA VEZ INSTALADO: 
+        1) En el archivo App.jsx:
+            1) Debe importarse: "import { BrowserRouter, Routes, Route } from 'react-router-dom'"
+            2) Dentro del return debe ponerse el componente (que abre y cierra) para que la app entienda que dentro de esas "etiquetas" se pondran todas las rutas >> <BrowserRouter>
+            3) Dentro del BrowserRouter debe ir el componente Routes que seria similar a un ul, por ejemplo.
+            4) Dentro de Routes ira el componente Route, que seria como un li. Es decir, habra tanta cantidad de componentes Route como cantidad de rutas que necesitemos.
+                - Para poder utilizar la ruta de los archivos o componentes que querramos rutear, es necesario importarlos al archivo app.jsx.
+
+                - ROUTE ACEPTA 2 PARAMS:
+                    1) path: Donde ira la url con la que va a trabajar la app. Para hacer home, se puede poner solo la /
+                    2) element: Es lo que va a mostrar dentro de la ruta indicada.
+
+                - Ademas, siempre conviene agregar un ultimo componente y archivo de ruta para cuando se ingresa una ruta que no es ninguna de las existentes, es decir la 404.
+
+
+            EL ARCHIVO APP ENTONCES QUEDARIA:
+                import { BrowserRouter } from 'react-router-dom'
+                import { Home } from './components/Home'
+                import { About } from './components/About'
+                import { Contact } from './components/Contact'
+                import { Page404 } from './components/Page404'
+
+                function App() {
+                    return (
+                        <>
+                            <BrowserRouter>
+                                <Routes>
+                                    <Route path="/" element={<Home />} />
+                                    <Route path="/about" element={<About />} />
+                                    <Route path="/contact" element={<Contact />} />
+                                    <Route path="*" element={<Page404 />} />
+                                </Routes>
+                            </BrowserRouter>
+                        </>
+                    )}
+
+
+    - LINK (COMPONENTE): Es un componente que viene instalado en la dependencia react router dom que permite hacer como si fuera una etiqueta a(href) pero sin que tenga que recargar la pagina (de esa manera la app se mantiene como single page app).
+        - Ahora, en vez de que el atributo sea href, va a ser to:"" y podemos poner directamente la ruta acortada. Por ejemplo si quisieramos ir de home a about, ponemos en el componente home: <Link to="/about" />
+        - Esto se va a ver como un link cualquiera, en azul y subrayado. Ahora, si quisieramos darle estilos como por ejemplo un boton conviene lo siguiente:
+            - Existe un hook que se llama useNavigate que funciona literalmente para navegar. Conviene utilizarlo cuando se tengan que hacer procesos antes de redireccionar.
+            - Luego de importarlo en el archivo correspondiente, por fuera del return se puede declarar una variable tipo const navigate = useNavigate() para que sea mas facil de utilizar.
+            - Luego en el boton se llama al onClick y se hace uso de la variable: onClick={() => navigate("/about")}
+
+
+    - PARAMETROS DE RUTA: Se usan para ir un poquito mas adentro en la ruta, por ejemplo si estoy en un ecommerce que tiene cards con los productos y quiero entrar a ver el detalle de un producto. Necesitaria que la ruta sea por ejemplo /products/156315212
+        - En donde declaro la ruta:
+            - Se pone a continuacion de la ruta con "/:" por ejemplo onClick={() => navigate("/products/:id")}
+        - En donde declaro qué va a ser ese parametro: 
+            - En el archivo de la ruta (en este caso products) se debe usar un nuevo hook: "useParams" que se debe importar para poder ser utilizado.
+            - Dentro de la funcion pero fuera del return, se debe declarar una variable para poder trabajar mejor el hook, quedaria: const params = useParams();
+            - Y luego adentro del return, en donde sea que vayamos a utilizar el parametro, ponemos entre llaves "params.id" por ejemplo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

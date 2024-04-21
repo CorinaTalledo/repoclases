@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+}
+
+
+/* Para MARGIN Y PADDING se puede poner:
+
+    - 1 solo valor, haciendo que sea todo lo mismo. 
+    - 2 valores que significan: el primero arriba y abajo, y el segundo izquierda y derecha.
+    - 3 valores siendo arriba, abajo, izquierda.
+    - 4 valores que son arriba, abajo, izquierda, derecha. */
+
+
+    /* PARA LOS BORDES SE PUEDE PONER:
+    1- propiedad poniendo primero el grosor en px, despues el tipo de borde(solid, dotted, etc.) y por ultimo el color.
+    2- Poniendo cada cosa separado es decir, border width, border color, etc. */
+
+
+    /* El box sizing permite que las cajas se mantengan responsive */
+
+
+
+h1{
+        background-color: brown;
+        padding: 10px 0px;
+        margin: 20px;
+}
+
+
+p{
+    padding: 20px;
+    border: 5px solid black;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+

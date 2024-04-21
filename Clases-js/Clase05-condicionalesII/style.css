@@ -1,0 +1,51 @@
+/*     
+
+CONDICIONALES II:
+
+1) OPERADOR Y: Se usa cuando se deben cumplir dos condiciones al mismo tiempo.
+    - El simbolo es &&. Doble.
+    - Despues del operador se debe volver a poner el dato del if. 
+
+
+
+2) OPERADOR O: Se usa cuando se debe cumplir una de las condiciones nada mas.
+    - El simbolo es ||.
+    - Despues del operador se debe volver a poner el dato del if. Ej: if {color === 'rojo' || COLOR === 'amarillo'}
+
+
+3) SWITCH: Sirve para cuando hay muchas condiciones en una funcion.
+    - const semaforo = (color) =>{
+        let puedepasar;
+        switch (color) {
+            case 'verde':
+                puedepasar = true;
+                break;
+
+            case 'amarillo':
+                puedepasar = false;
+                break;
+
+            case 'rojo':
+                puedepasar = false;
+                break;
+        
+            default:
+                puedepasar = 'color invalido'
+                break;
+        }
+        return puedepasar
+    }
+
+
+--------------------------
+
+
+EXPRESIONES REGULARES
+
+
+
+
+
+
+
+*/

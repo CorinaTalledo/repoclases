@@ -1,0 +1,87 @@
+
+/* 
+
+TRANSICIONES:  
+    - Conviene aplicarlas en una pseudoclase para generar mas dinamismo.
+    - Para que funcionen primero se debe poner el resultado al que queremos llegar y a continuacion las transitions.
+    - Se pueden poner varias propiedades de transition juntas. Por ejemplo transition: background-color, width, height, 2s, ease.
+    - Si la transition se pone en la etiqueta con pseudoclase (active, hover, etc), la transicion se va a hacer solo una vez (a la ida), cuando se active la pseudoclase. Si se pone en la etiqueta original (a la que le estas poniendo el active, hover, etc), se hace a la ida Y a la vuelta.
+
+
+1) transition-property: all >> Todas las propiedades que se mencionen deben tener una transicion.
+    - Conviene mencionar las propiedades que se quieren cambiar. Por ejemplo transition-property: background-color, width, height, etc.
+
+
+2) transition-duration: >> Se mide en segundos (2s por ejemplo).
+
+
+3) transition-timing-function: Es COMO se va a hacer la transicion, la forma
+    - ease >> Es la transicion normal. Empieza lento, se hace mas rapido al principio y se calma para ubicarse en su lugar.
+    - linear >> Es una transicion constante. Es mas lento que ease.
+    - ease-in >> Empieza lentamente y acelera al final
+    - ease-in-out >> Comienza rapidamente, se calma en el medio y se vuelve a hacer rapido.
+    - ease-out >> Comienza rapidamente y desacelera al final.
+
+    - cubic-bezier() >> Entre parentesis se deben poner los valores que representan un punto que se realiza entre un punto inicial y uno final de la animacion. Recibe valores entre 0 y 1.0. Los valores son x1, y1, x2, y2.
+
+
+4) transition-delay: >> Es el tiempo que tarda ANTES de arrancar la transicion. Es opcional
+
+
+------------------------
+
+TRANSFORM (): Lo que va entre parentesis son dos valores. Primero el eje x y luego el y.
+    - Funciona con el eje x y el y PERO el 0 es el objeto a mover y la lectura se hace de izquierda a derecha y de arriba hacia abajo. Si quiero mover el objeto hacia arriba el numero va a ser negativo, hacia abajo es positivo, hacia la izquierda es negativo y hacia la derecha es positivo.
+
+    - Cambia el tamaño o el punto en el navegador
+
+    - Se pone en px, % o em y determina cuanto y hacia donde se va a mover.
+
+    1) transform: translate() >> Es la propiedad que permite los desplazamientos sobre los ejes x e y.
+
+
+    2) transform: rotate() >> Entre parentesis van valores EN GRADOS ya que tiene que rotar sobre su eje. El numero en positivo se mueve como las agujas del reloj, el valor negativo mueve antihorario.
+    
+    
+    3) transform: scale() >> La transformacion es en cuanto a su ESCALA. Los valores son en x e y pero varia el tamaño, no el posicionamiento.
+
+
+    4) transform: skew() >> Lo inclina, son dos valores(x e y) y van en grados.
+
+
+    5) transform: translateZ >> Es un solo valor ya que el eje z es la profundidad. Hace que el elemento se mueva tipo 3D.
+
+
+    
+
+PROPAGACION >> Por jerarquia podes hacer hover en los hijos de un padre. Se pone, por ejemplo: .container:hover .hijo 
+
+
+
+
+
+TRANSFORM:
+    -
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+

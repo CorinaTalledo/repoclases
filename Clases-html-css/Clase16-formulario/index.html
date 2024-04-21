@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>FORMULARIO</title>
+</head>
+<body>
+
+    <!-- FORM CON INPUT TIPO TEXTO -->
+    
+    <form id="form-tipo-text">
+
+        <label for="nombre-usuario">Nombre: </label>
+        <input id="nombre-usuario" type="text" placeholder="Ingrese aquí su nombre">
+
+
+        <label for="apellido-usuario">Apellido: </label>
+        <input id="apellido-usuario" type="text" placeholder="Ingrese aquí su apellido">
+
+
+        <label for="submit"></label>
+        <input id="submit" type="submit">
+
+    </form>
+
+
+    <!-- FORM CON INPUT TIPO EMAIL Y PASSWORD -->
+    <form id="usuario-contraseña">
+
+        <label> Email:
+            <input type="email">
+        </label>
+
+
+        <label> Constraseña:
+            <input type="password" id="input-pass">
+        </label>
+
+
+        <label>
+            <input type="submit">
+        </label>
+
+    </form>
+
+
+
+<!-- FORM CON CHECKBOX -->
+
+    <form id="">
+
+    </form>
+
+
+
+    <!--- action: es para linkear por ejemplo, un archivo php. Ya no se usa
+        - method: es de tipo get o post, es decir pedir informacion o enviarla. Si no se pone nada, - queda como get.
+        - autocomplete: Por defecto es ON pero puede ser off.
+        - novalidate: Invalida los inputs en donde se ve la info -->
+
+
+
+    <!-- 
+        - LABEL: Indica el nombre del input. Es decir es lo que dice "nombre" para que despues el input te deje escribir tu nombre.
+            - For: Es el nombre o id del input, es decir deben coincidir. Sin este atributo, el label no se puede unir con el input por lo que no se puede ingresar correctamente la info 
+
+
+        - INPUT: Es donde se puede escribir.
+            - Si la etiqueta INPUT esta adentro de LABEL, no es necesario ponerle el atributo for porque ya lo reconoce como suyo.
+
+            - ATRIBUTOS DENTRO DE INPUT:
+                - Id: Es el nombre del input, debe coincidir con el "for" del label.
+                - Type: Habilita el tipo de input, el tipo de campo:
+                    - Text. El tipo text habilita cualquier caracter, vale letra, numeros y guiones, etc.
+                    - Email:
+                    - Password: Automaticamente pone los puntitos para que no se vea lo que se escribe.
+                    - Submit: Envia el formulario. Crea el boton directamente con la palabra "Enviar".
+                    - Checkbox: No se relaciona con el resto de los checkbox, se pueden tildar y destildar los que quiera en el formulario porque no afecta. Puede haber varios dentro del mismo label.
+                    - Radio: Es una OPCION dentro del label. Todas estas opciones deben compartir el mismo atributo name, debe ser igual en todas las opciones para indicar que se puede elegir uno solo.
+                    - Number: Activa automaticamente las flechitas adentro del input pero se pueden poner los atributos min, max, step(cada cuanto incrementa, por ejemplo que sale de 5 en 5), value(es el valor por defecto del campo, como si fuese una sugerencia).
+
+
+                - Placeholder: Es el mensaje que aparece escrito en gris clarito para que el usuario sepa que tipo de dato tiene que ingresar.
+                - Value: Es el valor que va a recibir js. Por ejemplo en las opciones hay que poner este atributo para que despues podamos "filtrar" la informacion y saber cuál fue el valor seleccionado por el usuario.
+                - Required: No se debe llenar nada entre comillas. Solo que no va a dejar enviar el formulario si falta esa info.
+
+
+            - Select: Es una etiqueta que debe ir adentro del label que crea una lista desplegable en la que hay que poner opciones. Adentro de esta etiqueta hay que poner:
+                - Option: Con el nombre de la opcion. Esto lo va a poder ver el usuario. Adentro de esta etiqueta hay que poner el atributo:
+                    - Value: Debe ser el mismo nombre que lo que aparece para el usuario para que js lo pueda leer.
+                    - Selected: Es la opcion que aparece por defecto.
+                    - Disable: Aparece una opcion que no te deja volver a seleccionar.
+                    - Hidden: Sirve para esconder la opcion. Por ejemplo para que la lista desplegable no tenga nada escrito de entrada.
+
+            - Textarea: Es una etiqueta que crea una caja de texto.
+                - Maxlength: Se puede poner un numero que sea el maximo de caracteres.
+                - Resize: none para que el cuadrado no se pueda extender.
+
+
+
+
+        
+
+
+        -->
+
+
+
+</body>
+</html>

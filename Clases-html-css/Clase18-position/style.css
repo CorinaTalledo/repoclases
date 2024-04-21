@@ -1,0 +1,41 @@
+
+/* 
+
+1) POSITION: STATIC >> Es el posicionamiento de los elementos
+
+
+2) POSITION: FIXED >> Esta relacionada a la ventana del navegador.
+    - Hay que decirle en donde se tiene que fijar: Lo que se pone despues es el espacio del margen mencionado como si fuera en px pero sin necesidad de poner px.
+        - Top: 0 >> Fija el elemento en el margen superior.
+        - Botton:
+        - Left:
+        - Right:
+
+    - Sirve, por ejemplo para hacer una navbar fija o hacer un icono de wp flotante en la esquina inferior derecha.
+
+
+3) POSITION: RELATIVE >> Los elementos se posicionan en relacion a su posicion normal.
+    - Puede recibir top,right, left y bottom y tambien z-index
+    - Se pueden usar numeros negativos para moverlo.
+    - Siempre se va a mover a partir de su posicion. Si hubiese un texto o una caja arriba, la posicion 0 de ese elemento va a ser DEBAJO del texto o caja.
+
+    SIRVE PARA HACER UN INPUT Y PONERLE UN ICONITO DE LUPITA ARRIBA.
+
+
+4) POSITION: ABSOLUT >> Para que funcione tiene que tener un padre relativo (si no lo tiene, su posicion va a ser respecto al body, es decir a tooooodo el body y no al navegador)
+    - Conviene ponerlo adentro de un padre para tener mayor control. Este debe ser relativo
+    - Limitas al elemento al espacio del padre.
+    - Acepta z-index
+
+
+5) POSITION: STICKY >> Es relativo cuando esta ubicado en su lugar original (va a respetar a sus hermanos) pero cuando se mueve de su lugar (con scroll), se mueve y tapa todos sus hermanos relativos, los absolutos no y los fixed tampoco.
+    - Para que el elemento se posicione adelante de todo, se usa z-index que es la tercer dimension y hace que se pueda posicionar al elemento respecto al volumen, como si fuese una capa de photoshop.
+    - El z-index se mide con numeros pero es relativo a los otros z-index.
+
+
+
+
+
+
+
+*/

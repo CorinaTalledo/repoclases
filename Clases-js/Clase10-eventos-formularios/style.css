@@ -1,0 +1,87 @@
+/* 
+
+CALLBACKS (de la clase anterior): 
+    - Son funciones adentro de funciones, es decir funciones que se vuelven a llamar para ser usadas en otras funciones.
+    - Primero es una funcion (sin ejecutar) y luego pasamos el nombre de esa funcion como un arguemento (es decir dentro de la ejecucion de otra funcion).
+    - La funcion que volvemos a llamar no se resuelve ni ejecuta hasta que se resuelve la funcion en donde la usamos como argumento.
+
+
+-----------------------------------
+
+EVENTOS II
+
+1) BUBBLING:
+    - Es cuando se activa mas de una funcion con un solo evento.
+    - Se propagan hacia arriba, es decir hacia sus padres
+    - Es importante tenerlo en cuenta porque con un solo click, por ejemplo, se pueden activar varias cosas y se pueden pisar.
+
+
+2) STOP BUBBLING/PROPAGATION: 
+    - .stopPropagation()
+    - Se corta la propagacion del evento
+
+
+---------------------
+
+VALIDACION DE FORMULARIO
+
+1) DESDE EL LADO DEL CLIENTE (desde el front end)
+    - Se hace la validacion ANTES de que llegue al servidor, de esa manera le ahorramos errores al servidor.
+
+    1) Required: Es un atributo del input, no tiene nada adentro y hace que sea obligatorio de competar.
+        - EN LA HOJA DE CSS: 
+            input:invalid {
+                borde rojo
+            }
+
+            Es decir se va a poner rojo en tanto el input sea invalido, es decir sin tener nada escrito ya que habiamos puesto que era obligatorio (required).
+
+            input:valid {
+                borde verde
+            }
+
+
+    2) MIN/MAX LENGTH: Para validad el largo de caracteres
+
+    3) MIN/MAX: Para validar numeros, por ejemplo, edades.
+
+    4) PATTERN: Se puede poner una expresion regular y validar la info segun eso.
+        - Sirve por ejemplo para que en un input email solo se pueda validar si tiene un @ y un .com
+        - Se pueden buscar las tipicas expresiones regulares en google.
+        
+
+    Como validarlo desde js: Ej: No permitir que el dominio sea @yahoo.com
+
+        1) Llamo al elemento para que aparezca en el js
+            const mainInput = document.getById('mail');
+            const boton = document.getById('submit-btn')
+
+
+        2) Llamo al boton que es lo que va a "activar" la funcion.
+            boton.addEventListener('click', () => enviarFormulario(event))
+
+
+        3) Creo una funcion con ifs para ver si es valido o no lo que el usuario pone: 
+            - Tener en cuenta que todos los inputs tienen value aunque no lo hayamos declarado, entonces en vez de llamar al target, llamamos al value directamente
+
+            const enviarFormulario = () => {
+                console.log(mailInput.value)
+                if (mailInput.value.includes('yahoo')){
+                    alert('El formato de email es muy antiguo')
+                };
+            }
+
+
+2) DESDE EL LADO DEL SERVIDOR (desde el back end)
+
+*/
+
+
+
+
+
+
+
+
+
+

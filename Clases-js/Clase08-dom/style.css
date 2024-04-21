@@ -1,0 +1,59 @@
+/* 
+
+ARBOL DOM: Document Object Model
+
+- Esta compuesto por nodos que es cada etiqueta en el html, donde se crean herencias que son las partes del abrol.
+
+- Entorno de ejecucion: Es el navegador en donde se ve la consola y el sitio, es global.
+- Arbol DOM: Es local y contiene al codigo.
+
+
+OBJETOS Y METODOS QUE SE PUEDEN USAR EN EL ENTORNO DE EJECUCION, O SEA EL NAVEGADOR: 
+- Objeto window: como los prompts y alerts.
+
+
+OBJETOS Y METODOS EN EL DOM: Son por ejemplo los pop ups y modulos creados desde el html para que esas "ventanitas" salten desde nuestro documento, nuestra pagina, no en el navegador.
+
+
+1) COMO PASAR LA INFO DEL HTML AL JS:
+
+Para pasar por ejemplo, el input de un nombre a js y que se pueda usar como dato, hay que crear una variable. Ej: 
+    EN EL HTML: <input type="text" id="name">
+    EN EL JS: const nombredelavariable = document.getElementById('ACA SE DEBE PONER EL NOMBRE DEL ID DEL INPUT, EN ESTE CASO "NAME"')
+
+    - Se puede pasar el nombre con:
+        - ID: document.getElementById. Sirve por ejemplo para un input en particular de un form.
+        - ETIQUETA: .getElementsByTagName. Por ejemplo si quisiera traer todas los parrafos.
+        - CLASE: .getElementsByClassName. Si quisiera modificar toda una clase (por ejemplo para hacer el modo oscuro).
+        - UNA ELEMENTO ESPECIFICO: .querySelector. Deben ponerse dos parametros ya que busca lo que le pidamos especificamente. Por ejemplo si quisieramos buscar una clase y luego el nombre de esa clase. Seria por ejemplo .querySelector('className', 'parrafo'). Aqui estariamos llamando a una clase (className es una palabra reservada de js) que se llama parrafo.
+        -           ..querySelectorAll('.parrafo'). Va a traer todos los elementos que tengan la clase parrafo. Trae al primer elemento que encuentra
+
+
+2) COMO MODIFICAR COSAS DESDE JS SIN TOCAR CSS.
+    - Primero debo llamarlo como en el paso anterior.
+
+    - Se puede y debe hacer console.log con el nombre de la clase o lo que sea que querramos ver y modificar. Posiblemente eso nos devuelva un array con la lista de elementos que tienen esa clase, por ejemplo. Para llamar a un elemento en particular de esa lista, hay que poner entre corchetes [[ el indice o posicion que querramos modificar. 
+        - Por ejemplo: console.log(listadeParrafosRojos[0].classlist) para que ver la lista de las clases que hay adentro del primer parrafo que tiene la clase lista de parrafos rojos.
+
+    - Una vez que se llama, en js se manipula el elemento con el nombre de la variable, ej inputNombre.
+
+    - Luego hay que llamar lo que queremos modificar a traves de METODOS DE DOM:
+        - AGREGAR ATRIBUTOS: .setAttribute('', ''). Recibe dos parametros, uno para poner el nombre del atributo a modificar y el segundo con el valor del atributo.
+        - SACAR ATRIBUTOS: .removeAttribute(''). En el parametro se debe poner el nombre del atributo.
+        - CAMBIAR ESTILOS: Se usan los mismos estilos que en css pero en vez de poner - entre palabras, se usa camelCase. Por ejemplo: font-size se convierte a fontSize
+            - .style.color = red 
+            - .style.fontSize = 80px
+            - .style.textDecoration = underline
+
+
+
+
+
+
+
+
+
+
+
+
+*/

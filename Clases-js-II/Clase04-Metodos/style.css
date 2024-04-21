@@ -1,0 +1,44 @@
+/* 
+
+METODOS:
+
+    - .map >> Crea un nuevo array a partir de uno ya existente aplicando una funcion a cada elemento del primer array. Como el resultado es distinto, se debe guardar en una nueva variable. De todas formas, el resultado va a ser de LA MISMA LONGITUD QUE EL ARRAY ORIGINAL
+        - Estructura: const variableNueva = variableAFiltrar.map ((elemento) => elemento)
+
+
+    - .filter >> Toma cada elemento de un array y los guarda en otra variable (el .filter se debe usar en una variable nueva). Solo devuelve los elementos que pasaron el filtro planteado.
+    
+        - Estructura: const variableNueva = variableAFiltrar ((elemento) => elemento % 2 === 0)
+            - Esto seria: viariableAFiltrar va a agarrar cada uno de sus elementos y va a hacer la operacion. Si el modulo de la operacion me da 0, entonces dejarlo filtrado, es decir llevarlo al array viariableNueva. Sino queda descartado.
+
+    
+    - .reduce >> Reduce un arreglo de valores a un solo valor o elemento. En el caso de un array de string, reduce todo a un string, por ejemplo una frase en caso de poner una suma. Para obtener el valor de salida (el resultado, lo que devuelve el metodo), ejecuta una función reductora en cada elemento del array.
+
+        - Estructura:   const suma = numeros.reduce((acc, item) => {
+                            return acc + item;
+                        }, 5);     
+                        
+                        console.log(suma); // 10
+
+            - Recibe dos parametros, el primero es un acumulador (acc) y el segundo son los items del array. 
+            - Hay un tercer parametro que es opcional y seria el indice del array en donde debe comenzar a reducir(en este caso, el 5). Entonces si lo que debe sumar es 10 pero debe empezar a sumar en 5, el resultado me va a dar 15.
+
+
+
+let palabras = ['¡', 'Hola,', 'mundo', '!'];
+// en este ejemplo estamos haciendo una reducción del array a un string
+const frase = palabras.reduce((acumulador, item) => {
+  return acumulador + ' ' + item;
+}, 'Frase:');
+//console.log(frase); // Frase: ¡ Hola, mundo 
+
+
+
+
+
+
+
+
+
+
+*/

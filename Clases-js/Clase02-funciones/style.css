@@ -1,0 +1,42 @@
+/* 
+
+FUNCIONES: Las funciones serian lo que va entre parentesis. 
+    - Deben ser declaradas y deben tener valores, sino no se va a ejecutar.
+    - Lo que se pone entre parentesis se llama "parametros" cuando la funcion se declara.
+    - Lo que se pone entre parentesis cuando se ejecuta la funcion(que debe coincidir con el parametro) es un argumento
+        Ej: 
+        
+        Declarando la funcion: 
+            fuction saludar (parámetro) {
+                console.log(parametro);
+                }
+        Ejecutando la funcion: 
+            saludar (argumento);
+
+
+    - Como declarar una funcion: 
+        - Antes >> 
+            function saludar(nombrePersona){
+                console.log('¡Hola' + nombrePersona + !);
+            }
+
+
+        - AHORA >>  Funcione flecha o arrow
+            const nombredefuncion(ej: suma) = (num1, num2) => {
+                return num1 + num2
+            };
+
+
+    - Como ejecutar una funcion para que corra:
+        - Luego de construir la funcion se debe poner: 
+            "console.log (marca)" POR AFUERA DE LA FUNCION porqye declarar la funcion es como poner ingredientes en una licuadora, falta prenderla. El prenderla seria este paso de poner el console.log por afuera de las llaves de la funcion.
+
+
+
+
+
+
+
+
+*/
+

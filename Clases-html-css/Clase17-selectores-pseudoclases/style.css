@@ -1,0 +1,164 @@
+
+
+/* 
+
+Ya conocemos los atributos de etiqueta, de clase y de id.
+
+Existe otro selector que es el selector de ATRIBUTO.
+
+ATRIBUTO: Complementa las etiquetas como los type en los forms, las class, el href, alt, etc.
+
+Se llama poniendo: 
+
+    1) Se puede llamar a los atributos que esten adentro de x etiqueta:
+        selector[nombre del atributo]{     }
+            Ej: a[href=#contacto]{     }
+
+
+    2) Se puede llamar solo al atributo en donde la modificacion se va a ver en todos los atributos esten en una etiqueta o en otra:
+        [nombre del atributo]
+            Ej: [href]{     }
+
+
+Expresiones regulares dentro de un selector de atributos:   
+
+    1) Al usar * le estamos pidiendo que busque la clase que coincida con el valor incorporado entre "".
+        Ej: div[class*="mediano"]{     }
+
+
+    2) Al usar ^ estamos llamando a todos los elementos que comiencen con una letra o varios(va a matchear con la primer coincidencia en caso de que haya mas de una clase por ejemplo).
+        Ej: div[class^="c"]{     }
+
+        Aca se modificara todos los elementos adentro de los divs que tengan una clase que empiecen con c.
+
+
+    3) Si usamos $ le estamos diciendo que las modificaciones se hagan en el FORMATO que llamemos.
+        Ej: img[src$="jpg"]{     }
+            Aca estamos diciendo que las modificaciones se hagan en todos las imagenes cuyas fuentes terminen en jpg.
+            
+
+
+SELECTOR DE HERMANOS (segun la jerarquia en el html (marcado con los colores de las columnas que salen del margen)): ~
+    Ej: div ~ p{     }
+        Aca le estamos diciendo que las modificaciones se deben hacer en todas las etiquetas p hermanos de un div pero deben tener todos la misma jerarquia. Si hay dos divs y luego una p, no las va a tener en cuenta.
+
+        Seria como juntar a todas las personas que tengan una hermana menor mujer(por ejemplo), sin importar la generación.
+
+
+SELECTOR DE HERMANOS ADYACENTES: La etiqueta a la que se llama debe estar AL LADO en el html.
+    Ej: .hermanoMayor + h3
+        Aca estamos diciendo que las modificaciones deben realizarse en todos los h3 que sean HERMANOS y esten AL LADO (o abajo) de la etiqueta que tiene lo clase .hermanoMayor.
+
+
+SELECTOR DESCENDIENTE: Permite llamar a todos los elementos que son hijos o nietos de otro elemento en el arbol.
+    Ej: .lista li
+        Aca estamos diciendo que las modificaciones se deben hacer en todas las listas que tengan hijos li(aunque esten adentro de un div o lo que sea)
+
+
+SELECTOR DESCENDIENTE DIRECTO: Permite seleccionar solamente a los elementos que son descendientes DIRECTOS, es decir hijos.
+    Ej: .lista > li
+        Aca estamos diciendo que las modificaciones se deben hacer en todas las li que sean hijas(y nada mas que hijas) de la clase .lista.
+*/
+
+/* ---------------------------- */
+
+/* 
+
+PSEUDOCLASES: Es una palabra que se añade a los selectores y que especifica un estado especial de un elemento seleccionado.
+
+- Se deben agregar a un selector de cualquier tipo.
+
+
+1) :after >> Añade contenido adicional a un elemento seleccionado a traves de su selector. Simplemente va a agregar el icono o lo que le digas entre llaves y comillas. La idea de hacerlo por css y no html es que no tengas que modificar cada una de las lineas correspondientes en caso de tener mucho.
+    
+    - SINTAXIS: selector: after{"cualquier cosa"}
+
+    - Ejemplo: li::after {content: }
+
+
+2) :before >> Añade el contenido adicional ANTES o al principio del contenido al que llamamos. Sirve por ejemplo para customizar los puntitos que vienen por default en una lista.
+    
+    - SINTAXIS: selector: before{"cualquier cosa"}
+    
+    - Ejemplo: li::before {content: }
+
+
+3) :not() >> Excluye a esos elementos de recibir un estilo. Todo lo que SI se debe cumplir igual se debe poner entre llaves pero poniendo not(nombre de la clase o selector) cancelamos esos estilos en esa clase o selector.
+
+ATENCION: PUEDE SERVIR PARA ELIMINAR EL ESTILO DEL PRIMER H2 EN EL PORTFOLIO
+    
+    - SINTAXIS: selector: not(otro selector) {"cualquier cosa"}
+    
+    - Ejemplo: div:not(.nombredelaclase) {content: }
+
+    - Se puede concatenar con otra clase para decir todas estas clases Y esta otra.
+
+
+4) :nth-child() >> Selecciona elementos basados EN SU POSICION en relacion con sus hermanos. Intercala los estilos mencionados entre hermanos
+
+    - SINTAXIS: selector:nth-child(indicacion de matematica*){}
+        * - Even: seleccionas los numeros pares
+          - Odd: seleccionas los numeros impares
+          - Numero solo: seleccionas solo el numero del hermano (si quisieras resaltar solo ese por ejemplo)
+          - Un numero cualquiera n + 1: Ejemplo >> 2n+1: va a modificar uno si uno no pero empezando desde la segunda linea
+
+
+5) :nth-of-type() >> Selecciona elementos basados en posicion con sus hermanos DEL MISMO TIPO que sus hermanos. Como el nth child pero TIENE QUE CUMPLIR CON EL TIPO DE ETIQUETA
+
+
+6) :hover >> El cambio se hace por posicionar el mouse arriba del elemento. Ya tiene que ser visible el elemento
+    
+    - SINTAXIS: nombre del selector: hover{}
+
+    - Ejemplo: .clase:hover {background-color: white}
+
+
+7) :active >> Se presenta cuando un elemento es activado por el usuario, por ejemplo cuando se clickea sobre un boton.
+
+    - SINTAXIS: 
+
+    
+
+8) :focus{
+        - Permite los cambios sobre la visualizacion que se enfocan y son elementos interactivas (las a por ejemplo)
+        - Sirve para el cursor como para el tab.
+
+
+9) :target{
+        - Sirve para "resaltar" de alguna manera el resultado de un enlace LOCAL. Por ejemplo, si en el menu tengo tres o cuatro enlaces que me llevan a lugares DENTRO DEL MISMO HTML, le pongo target y un color de fondo al texto.
+
+        - Tambien se puede concatenar poniendo :target:before{
+
+
+10) :checked{
+        Sirve para 
+
+
+11) :valid{
+        Selecciona los elementos de entrada que son validos segun las reglas de validacion del form (como el @ en el caso del email).
+
+        Aca estas diciendo que se activen los estilos cuando se ingresa en el formulario un valor valido.
+
+        Sirve mas que nada para email por ejemplo y capaz contraseña
+
+
+12) :invalid{
+        Selecciona los elementos de entrada que son invalidos segun las reglas de validacion del form (como el @ en el caso del email).
+
+        Aca estas diciendo que se activen los estilos cuando se ingresa en el formulario un valor invalido.
+
+
+13) ::placeholder{
+        Modifica el placeholder
+        
+        Si se pone placeholder-shown es para activar las modificaciones en los placesholders visibles
+*/
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+
+/* 
+PROPIEDADES EN LOS HIJOS QUE SON FLEXIBLES POR EL PADRE: 
+    - FLEX GROW: 
+        - Taza de crecimiento del item en relacion al espacio disponible y a sus hermanos.
+        - Tiene que ser un numero positivo, no puede ser negativo.
+        - Es como ponerle un width pero con un valor relativo, en vez de  absoluto.
+        - No es un valor en particular como lo son los px sino que es en relacion a sus hermanos y al espacio disponible por lo que no es compatible con justify content.
+        - Si el numero es el mismo en todos los hermanos, el espacio se distribuye por igual por lo que quedarian del mismo tamaño.
+        - Se debe aplicar a todos los hermanos porque el valor de flex grow predeterminado es 0.
+        - No funciona con flex wrap porque flex grow es relativo al espacio disponible mientras que flex wrap va a hacer que los elementos (con valor absoluto como width) no se achiquen sino que vayan eliminando el espacio entre si.
+
+
+    - FLEX SHRINK:
+        - Taza de reduccion del item en relacion al espacio de esa caja (width) y a sus hermanos.
+        - Valor por defecto: 1.
+        - En caso de poner 0, ese hijo no va a reducirse ni perder el tamaño.
+        - El elemento de mayor valor, va a reducirse antes que sus hermanos que van a mantener el ancho hasta que el de mayor valor no pueda reducirse mas.
+        - No funciona con flex grow.
+        - Si el numero es el mismo en todos los hermanos, se van a achicar/encoger todos por igual.
+        - Solo se usan valores positivos.
+
+        
+    - ORDER:
+        - Especifica el orden del elemento que no esta relacionado orden en el codigo html (por defecto).
+        - Se definen con numeros ascendentes. El que tiene el numero mas pequeño es el que se presenta primero.
+        - Si hay dos hermanos con el mismo valor, el navegador va a leer el html y poner primero el que este primero en el codigo html.
+
+
+    - ALIGN SELF:
+        - Sobreescribe todo lo que este seteado con align items(que va en el padre).
+        - Funciona en el eje invertido. Sobre x si el eje principal es y, y sobre y si el eje principal es x.
+        - 
+*/
+
+.container {
+    display: flex; 
+    height: 200px;
+    align-items: center;
+    flex-direction: column;
+    background-color: blueviolet;     
+}
+
+.box {
+    margin: 5px;
+    background-color: aquamarine;
+    padding: 10px;
+    border: 1px solid grey;         
+}
+
+.box-1 {
+    order: 1;
+}
+
+.box-2 {
+    order: 3;
+    align-self: stretch;
+}
+
+.box-3 {
+    order: 2
+}
+
+.box-4 {
+    order: 2;
+}
+
+.box-5 {
+    order: 4;
+}
+
+/* .contenedor-mayor {
+    display: flex;
+    justify-content: center;
+}
+.contenedor-prueba {
+    width: 70%;
+    height: 500px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;       
+}
+.caja {
+    background-color: antiquewhite;
+    padding: 10px;
+    height: 100px;
+    flex-grow: 1;
+    margin: 10px;
+} */

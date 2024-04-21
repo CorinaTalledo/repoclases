@@ -1,0 +1,34 @@
+/* 
+
+Paradigma BEM y SMACSS:
+- Bem: Bloques, elementos y modificadores.
+- Smacss: Scalable and Modular Architecture for CSS
+
+
+1) DESCRIPTIVAS
+
+2) COHERENCIA
+
+3) Evitar estilos en los nombres de las clases. Por ejemplo: card-verde.
+
+4) Utilizar nombres semanticos: Las clases deben reflejar el uso de la clase.
+
+5) No mezclar español con ingles
+
+6) Evitar abreviaciones y nombres muy largos
+
+7) Evitar selectores de etiqueta
+
+8) Evitar usar ID's: Es demasiado especifico y no se deberian reutilizar.
+
+9) Evitar selectores complejos (mas de un selector para hacer estilos en comun): Suele ser mejor ponerle una clase en comun y llamar solo a esa clase antes que un selector complejo.
+
+10) Usar prefijos: Pueden ser utiles para indicar el estado o proposito de la clase.
+    - is: Del verb to be. Ejemplo is-hidden, is-active, is-flex.
+
+11) Usar clases compuestas por padre-hijo: Si el padre es contenedor-productos, el hijo corresponderia que se llame card-productos, por ejemplo.
+
+12) Ser consistentes con la nomenclatura: Si los elementos se relacionan, relacionarlos tambien con los nombres de las clases. Si se empieza siendo consistente, continuarlo.
+
+
+*/

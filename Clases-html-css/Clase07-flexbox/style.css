@@ -1,0 +1,70 @@
+
+/* DISPLAY FLEX:
+
+    - Se escribe en el contenedor PADRE. Eso hara que los hijos sean flexibles pero no el contenido de adentro de los hijos. Si se pone display flex en el padre, no se pone inline block en el hijo.
+    
+    - Por defecto se pone en fila o sea row. Se aplica cuando se quiere cambiar la direccion, por ejemplo con row reverse es decir, dando vuelta los elementos (5 4 3 2 1) o column (uno abajo del otro). Poner flex direction: row es redundante, no es necesario escribirlo */
+
+
+/* JUSTIFY CONTENT:
+    - Decide la posicion de los hijos en el eje x, horizontal, se pueden centrar todos al mismo tiempo, ponerlo a la izquierda o derecha. Permite mas dinamismo y hace que sea responsive
+
+    - Es como un text align pero para los contenedores. Text align es para el contenido adentro de los hijos.
+
+    - Al poner justify content: COLUMN, debe setearse un alto para que los elementos sepan en que espacio deben ubicarse.
+*/
+
+
+/* AIGN ITEMS:
+    - Decide la posicion de los hijos en el eje y, o sea en vertical.
+    - Para que funcione, hay que setear un alto/height pero a veces conviene setear un margen al contenedor padre(especialmente margen de arriba y abajo)
+    */
+
+
+/* FLEX-WRAP:
+    - Se posicionan los objetos en base al espacio disponible. Si se achica la pantalla, en vez de achicarse los objetos, se van a bajar de linea manteniendo su tamaño. */
+
+
+/* ALIGN CONTENT:
+    - Esta relacionado con flex wrap. */
+
+
+/* ESPACIO ENTRE LOS HIJOS DE UN CONTENEDOR >> JUSTIFY CONTENT:
+
+    - Si o si hay que setear un alto para que los elementos sepan el espacio en donde deben moverse.
+    - Space between: Los items van a tener espacio solo entre ellos.
+    - Space around: El espacio va a hacerse entre los items pero tambien antes y despues.
+    - Space evenly: Distribuye los items en el espacio de igual manera. */
+
+
+    .bandera-argentina {    
+        width: 300px;
+        height: 200px;
+        
+    }
+    
+
+    .franja-celeste {
+        width: 100%;
+        height: 33%;
+        background-color: rgb(24, 163, 244);
+    }
+    
+
+    .franja-blanca {
+        width: 100%;
+        height: 33%;
+        background-color: white;
+    }
+    
+
+    body {
+        display: flex;
+        justify-content: space-around;
+    } 
+
+
+
+
+
+

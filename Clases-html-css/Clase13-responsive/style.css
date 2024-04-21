@@ -1,0 +1,56 @@
+/* 
+
+Flex es responsive
+
+
+MEDIAS QUERYS
+
+    Para generar puntos de quibre, por ejemplo si el espacio entre una lista de navbar se achique demasiado se pone "@media":
+
+    Ejemplo: @media ( max-width: 1220px ) and (max-height: 845px) {
+        .lista-nav{
+            width: 30%
+        }
+
+    }
+
+
+    DESGLOCE: 
+        - "@media": es la manera de decirle al codigo que vas a hacer querys.
+        - "max-width xxx px": Con esto se determina el tope maximo de ancho que tiene que respetar el navegador antes de hacer el quiebre que vamos a aclarar despues.
+        - "and (max-height: 845px)": Con "and" le decimos que deben cumplirse ambas condiciones para que se vean las modificaciones que le decimos despues. 
+        - ".lista-nav": Es un ejemplo, se debe llamar a la clase, etiqueta o lo que sea que se quiera modificar.
+        - "width: 30%": Es un ejemplo de ancho de lo que debe tener en cuenta el navegador UNA VEZ que la pantalla sea mas chica que lo determinado en "max-widht". Puede hacerse con cualquier propiedad como ser colores o disposicion en columna o fila.
+
+
+    -------------------------------
+
+
+        - Se determina el tamaño en el que se va a ver el sitio y si se cambia el tamaño, podemos determinar como se comportan los elementos.
+        - Se puede hacer sobre el alto pero se usa mas para el ancho. No es recomendable para el alto
+        - Los porcentajes pueden hacer que la web sea mas responsiva.
+        - Los px, como son medidas absolutas, no son responsivos.
+        - Para eliminar un objeto se pone "display: none"
+        - "visibility: hidden" >> no se va a ver el elemento pero va a seguir ocupando el espacio en el navegador.
+        
+
+    - MIN WIDTH Y MIN HEIGHT: Quiere decir a partir de este tamaño, quiero que se modifiquen las cosas:
+        - Se usa por ejemplo si pensamos el sitio como mobile first. Es decir que la prioridad es que se vea en celulares, luego en pcs.
+        - Puede ponerse, por ejemplo, un ancho minimo y un ancho maximo para generar un rango donde deben hacerse las modificaciones, de esa manera evitamos tener que hacer mucho break up points.
+
+
+CALC: Hace calculos sobre medidas para ajustar por ejemplo, margenes
+
+    - Ejemplo: 
+
+
+
+
+    --------------------------------------------------------------
+
+
+    
+- MAX HEIGHT Y WIDTH EN LOS ELEMENTOS: Se usa para que, por ejemplo, si hay mucho texto, pueda encajar 
+
+ */
+

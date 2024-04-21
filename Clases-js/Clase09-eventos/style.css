@@ -1,0 +1,92 @@
+/* 
+EVENTOS: acontecimientos que suceden en la web.
+
+
+Event handler:
+    1) Como hacer que al cliquear un elemento cambie de color otra cosa: 
+        1) Buscas en el documento el elemento: const caja = document.getElementById('box').
+
+        2) Armar la funcion para que el elemento por ejemplo, cambie el color del fondo:
+            - const cambioDeColor = () =>{
+                caja.style.backgroundColor = 'red' 
+            };
+            - Se pueden poner mas cosas adentro de la funcion para que cambien de color con el mismo evento.
+
+        3) Event listener o event handler con funcion anonima: Esto lo que va a hacer es "unir" o vincular el boton con la funcion
+            - Se llama al evento a traves de una funcion anonima:
+            - boton.addEventListener('click', () => cambioDeColor());
+                - boton: es el nombre de la funcion con la que llame inicialmente al boton desde el html al js(document.getbyid)
+                - .addEventListener: activo al listener
+                - 'click': es la accion o evento que debe suceder para que el listener se active.
+                - () =>: es la funicon anonima que lo que hace es tener al listener pendiente pero no esta del todo activado, sino la funcion estaria andando sin tener que hacer el click.
+                -  cambioDeColor(): con esto llamo a la funcion que quiero que se active al hacer click, que es la previamente creada en el paso 2.
+                
+    
+    2) EVENTOS DE MOUSE Y TECLADO. Click, click derecho, click izquierdo, scroll, etc. Tipear, borrar: Como capturar lo que se escribe adentro de un input.
+
+        1) Buscar en el doc el input: const input = document.getElementById('mi-input')
+
+        2) Armar la funcion: 
+            const escribiendo = () =>{
+            }
+
+        3) Armar el evento: 
+            input.addEventListener('input', () => escribiendo());
+
+        
+    3) OBJETO EVENTO(event): COMO CAPTURAR LA INFORMACION QUE SE ESCRIBE POR EJEMPLO EN UN INPUT Y PASARLO A OTRO LADO DE LA PANTALLA.
+        - Hay que llenar los parentesis de la funcion y del evento
+            Suponiendo que tengo un input color y declare la funcion para llamarlo del html al js, debo crear una funcion que inicialmente es anonima (con los parentesis vacios). Entonces ahora hay que llenar esos parentesis para que el evento se active y modifique lo que queremos.
+
+            1) Estructura de la funcion
+                - const obtenerColor = (e) =>{
+                    console.log('me ejecute', e.target.value)
+                    const colorcito = e.target.value;
+                    }
+
+                - el console.log es solo para que se muestre en la consola
+                    - e es por convencion pero podria ser h, event o cualquier cosa. Lo importante es que coincida con lo que esta entre parentesis.
+                    - .target.value es porque estamos queriendo buscar el VALOR de nuestro OBEJETIVO (en este caso seria el valor o sea lo que esta escrito en el input)
+
+                - dentro de la funcion, fuera del console.log: 
+                    - Llamo a la funcion GLOBAL (declarada al principio) que quiero que se muestre al activarse el evento. En este caso la variable "colorcito" y como VALOR le decimos que queremos que se muestre el valor del objetivo, es decir e.target.value. 
+
+
+
+            2) En el evento es para darle un valor a lo que obtenemos del input: 
+                - input.addEventListener('input', (EVENTO) => obtenerColor(EVENTO));
+                    - Podria ser la palabra evento como la palabra perrito, lo importante es que se repitan dentro de la funcion. Puede repetirse la palabra en el resto del codigo por el scope.
+
+
+            3) Si quisieramos modificar varias cosas con el mismo evento, se llama al evento nuevamente.
+                Ej: 
+                boton.addEventListener('click', () => cambioDeColor()); que va a cambiar el color al hacer click
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+

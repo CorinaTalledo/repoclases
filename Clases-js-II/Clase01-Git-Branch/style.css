@@ -1,0 +1,98 @@
+
+/* 
+
+GIT: Sistema de controlador de versiones
+
+GITHUB / GITLAB / GITBUCKET: Servidores de almacenamiento, como una nube para archivos de codigo
+
+----------------------
+
+COMO LLEVAR TODO EL CODIGO QUE APARECE EN GITHUB A SU COMPUTADORA LOCAL
+
+1) Crear una nueva carpeta en la computadora. Mejor si es aparte ya que al ser colaborativo puede complicarse con los comandos.
+
+2) La abrimos en el vsc y vamos a la terminal DEL VSC.
+
+3) Una vez que estamos en la ubicacion correcta ponemos el comando: git clone. Y a continuacion, en la misma linea se pone el enlace de la url, ya sea de la ssh o de la https. Esto va a hacer que la carpeta se cree pero no va a tener el git hecho.
+
+4) Hay que moverse a la carpeta correspondiente >> cd .... Ahi es en donde estará el repositorio compartido y entre () aparecera si la rama es MAIN o MASTER. Lo que va a aparecer, tiene que ser lo mismo que le aparecio a la primer persona que hizo el push. Si la primer persona tiene main, el de quien lo clona debe aparecer como main.
+
+5) Como el main no se debe tocar porque seria el codigo original, se debe crear una nueva rama. Entonces en la consola se pone >> GIT BRANCH Nombre-de-la-rama.
+
+6) Ahora la rama esta creada pero todavia no estamos ubicadas en esa rama. Entonces en la consola hay que poner >> GIT CHECKOUT Nombre-de-la-rama / GIT SWITCH Nombre-de-la-rama.
+
+7) Ahora entre parentesis, en vez de decir main o master, deberia decir el nombre de la rama creada y ya se puede trabajar sin problemas.
+
+
+-----------------------------
+
+
+COMO VOLVER A SUBIR LO QUE SE TRABAJO LOCALMENTE CON EL REPOSITORIO CLONADO: 
+
+1) Siempre checkeando que se este en la carpeta y la rama creada >> GIT ADD . 
+
+2) GIT COMMIT -M ""
+
+3) GIT PUSH
+
+4) Ahora debemos crear nuestra rama en el remoto ya que hasta ahora, estaba solo en nuestra computadora local. Para pasarla al remoto entonces >> GIT PUSH --SET UPSTREAM ORIGIN nombre-de-la-rama. Esto nos va a devolver que hay una nueva rama creada.
+
+5) En github se va a ver el respositorio actualizado y la nueva rama que va a estar en la lista desplegable donde dice "Main".
+
+6) Ahora se debe pedir una "revision" a quien tiene el repo original. Entonces en github hay una opcion(dentro del repo) que dice >> PULL REQUEST.
+
+7) Para poder "responder" a la solicitud de "revision", se debe clickar en >> MERGE PULL REQUEST. Esto normalmente lo hace quien tiene el repo original.
+
+
+--------------------------------
+
+
+COMO UNIR UN REPO LOCAL(CON EL QUE YA ESTABAS TRABAJANDO) CON UNO REMOTO(QUE ACABA DE SER ACTUALIZADO): Serian dos ramas que no son la original(main)
+
+1) GIT PULL ORIGIN MAIN >> 
+
+2) Como ya creamos una rama local en la que estabamos trabajando con nuestra tarea, tengo que unir el repo actualizado en el que trabajaron mis compañeros, con lo que estoy haciendo yo. Para eso en la consola se pone >> GIT MERGE MAIN (trae main y lo mete adentro del footer)  oooo  GIT MERGE ORIGIN MAIN (el remoto). No es lo mismo estar parada en tu carpeta local y mergear el main que estar en el main y mergear la carpeta local ya que la informacion se pisa o suplanta.
+
+3) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

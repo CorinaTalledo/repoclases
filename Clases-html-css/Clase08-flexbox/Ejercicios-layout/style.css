@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+
+header{
+    background-color: blueviolet;
+    flex-grow: 1;
+}
+
+
+main{
+    background-color: antiquewhite;
+    flex-grow: 3;
+}
+
+
+footer{
+    background-color: blue;
+    flex-grow: 1;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

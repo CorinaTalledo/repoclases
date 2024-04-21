@@ -1,0 +1,74 @@
+/* 
+
+- LIBRERIA: Nos da la facilidad o herramienta para solucionar un problema. Por ejemplo Bootstrap, Bulma, etc.
+
+- FRAMEWORK: Soluciona un conjunto de problemas. Por ejemplo indica como tengo que administrar los archivos, como tengo que escribir x cosa, etc. Podria ser MomentJs.
+
+- NPM: Maneja y permite descargar paquetes de JavaScript
+
+
+- COMO TRABAJA REACT: Con virtaul y react dom
+
+1) VIRTUAL DOM: 
+    - Copia el dom real (la ventana de google chrome por ejemplo).
+    - Lo que hace es comparar el virtual con el real para que cuando haya un cambio, se vea en el dom real.
+
+
+2) REACT DOM: 
+    - Es el que aplica el cambio enviado por el virtual dom.
+
+
+/////////////////
+
+COMO INSTALAR NODE Y REACT (en consola):
+- npm init (o create) vite@latest >> https://vitejs.dev/. Vite ejecuta las plantillas.
+- ? project name: ... nombre del proyecto
+- Select a framework: React
+- Select a variant: JavaScript
+
+- Una vez que se instala hay que moverse a esa direccion.
+
+- Luego hay que poner: npm install y npm run dev (run dev es siempre que se quiera empezar a ejecutar)
+
+- Una vez que se instala va a pasar un link con los numeros del ip local (o algo asi).
+- Se abre con ctrl shift y ya se abre react
+- Para detener la ejecucion se pone ctrl C en la consola.
+
+
+////////////////////////
+
+ARCHIVOS QUE SE VEN UNA VEZ INSTALADO REACT: 
+
+- viteconfig: Es la configuracion de vite. Nosotros no lo tocamos.
+- readme: 
+- package.json: Aparece la info y configuracion del proyecto. Se pueden modificar algunas cosas como el nombre pero conviene no tocar nada.
+    - Objeto scripts: No hay que tocar nada pero para saber, dev y build son cosas que se utilizan para levantar y deployar el proyecto.
+    - Objeto dependencias: Figuran los paquetes que estan instalados como react y react-dom y las versiones. Cada vez que se instale algo con npm, se sumara a esa lista.
+
+- package-lock.json: Registra todo lo que se va a instalando, con la informacion de donde se instalo, el numero de version
+
+- index.html: Es el mismo html de siempre pero tiene que tener un div con un id que diga root y un script tipo modulo con un src automatico.
+
+- gitignore: Le dice a github que tiene que ignorar para subir, por ejemplo datos sensibles.
+
+- eslintsrc: Detecta errores y no lo tenemos que tocar nosotros
+
+- Public: Aca irian las carpetas por ejemplo de img, el archivo de fonts, iconos, videos, etc. 
+
+- Carpeta node modules: Es un archivo que esta en git ignore. Aca se almacenan todos los paquetes que vienen en node, uno de los cuales va a ser react. No se toca.
+
+- Carpeta src:
+    - Archivo main.jsx: Hay un reactDom que crea la raiz llamando como id al id del div dentro del index que se llama root. Luego dice .render
+
+    - Aqui adentro hay que crear una carpeta que se llame "components". Aqui adentro van a ir nuestros archivos.
+
+
+- Componentes: Se ven como funciones y deben hacer solo una cosa para que pueda reutilizarse.
+    - Aqui se debe crear un nuevo archivo siempre con la primer letra en mayuscula y extension .jsx.
+    - Jsx: Es una extension de javascript que permite colocar html. Pone el loguito de react y permite que el vsc nos de ayudas.
+    - En todo archivo .jsx debe haber una sola funcion y ademas un export para que pueda vincularse con el resto de los archivos.
+    - Luego en App.jsx debemos importar ese componente y llamarlo dentro de la funcion principal
+    - Para meter javascript dentro del html, hay que poner adentro de la etiqueta html correspondiente, las llaves con lo que quiero que haga de js.
+    - react.fragment: ahora se usan los piquitos de las etiquetas vacias para crear el react.fragment. que es la etiqueta padre que va a retornar la funcion del componente.
+
+*/

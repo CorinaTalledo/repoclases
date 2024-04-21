@@ -1,0 +1,56 @@
+/* 
+
+BUCLES: Son estructuras repetitivas que iteran(recorren) sobre un array
+
+- Reciben 3 parametros: 
+    1. Indice >> Desde donde se empieza a recorrer. Se debe poner el numero de indice, es decir que empieza en 0.
+    2. Final >> Has donde va a recorrer.
+    3. Incremento >> De qué forma va a contar. De uno en uno, de dos en dos, etc.
+
+
+1) Bucle FOR (Hay mas tipos):
+- Estructura:
+    for(let i = 0; i <= 5; i =i++){
+    }
+
+    for >> declara el inicio de la funcion del bucle
+    let >> Da comienzo a la variable del for pero no se puede poner const porque el valor va a cambiar cada vez.
+    i >> Se utiliza la i por convencion pero no es una palabra reservada
+    =0 >> Es la posicion del indice del array en donde va a comenzar.
+    ; >> Separa el termino, es decir el parametro.
+    <=5 >> Es la posicion del indice del array en donde quiero que termine. Si lo pongo sin el =, no va a tener en cuenta la 5ta posicion.
+    =i++ >> Es el incremento. ++ es la forma abreviada de decir de uno en uno.
+
+
+- Al ponerle el 5 en la posicion final que debe contar, estamos limitando la cantidad de datos que se van a tener en cuenta. Teniendo en cuenta que esto puede servir para leer una base de datos en donde se agregan cosas todo el tiempo, es muy limitante. Para eso, en el segundo parametro del for, se pone: 
+    ; i < nombre del parametro de la funcion que contiene el for .length >> Como .length cuenta la cantidad de elementos adentro del array y se mantiene actualizado, esto permite leer toda la funcion, constantemente.
+
+
+- Tiene 2 formas de cortar la ejecucion: 
+    1) Cuando se terminen las vueltas que tiene que dar
+    2) Cuando se cumple una condicion (if)
+
+
+2) BUCLES FOR IN Y FOR OF: 
+    a) For of >> Recorre los elementos de un array.
+    b) For in >> Recorre objetos (no lo vamos a ver ahora)
+
+    a) FOR OF: 
+        - Sintaxis >> for (let variable/parametro OF variable/parametro tipo listado){}
+        - Nos evita tener que poner el .length. Simplemente te muestra cada elemento de la variable total.
+        - La desventaja es que no se puede ver la posicion de cada cosa porque simplemente devuelve cada elemento.
+        - Funciona por cada elemento del array o string(cada letra)
+        - Corta la ejecucion cuando se cumple la funcion o deja de recorrer toda la variable total tipo listado.
+        - Se puede poner un of adentro de otro
+        
+
+3) FOR EACH (clase 6-buenas practicas)
+
+4) WHILE (clase 6-buenas practicas)
+
+5) DO WHILE (clase 6-buenas practicas)
+
+
+
+
+*/

@@ -1,0 +1,55 @@
+
+p{
+    width: 25%;
+    background-color: blueviolet;
+}
+
+div{
+    background-color: aqua;
+}
+
+
+/* RESPONSIVE II 
+
+- Medida relativa al padre 1 >> PORCENTAJE
+
+- El porcentaje va a ser segun EL PADRE. Si el div es de 200px y el hijo es del 50%, el hijo va a ser de 100px porque es respecto al padre, no a toda la pantalla.
+- Tanto el padre como el hijo deben tener medidas relativas.
+- Conviene no setear un width al padre.
+- Ningun contenedor viene con un ALTO establecido por lo que el % de lo contenedores, va a depender siempre del contenido AL MENOS QUE se setee un alto. El ancho si es posible ponerlo en % directamente porque las etiquetas en bloque ocupan el 100% de la pantalla (en ancho).
+
+
+- Medida relativa al padre 2 >> EM
+    - em. Esta unidad de medida es relativa al tamaño de letra o font size establecida en el navegador o en el contenedor padre. Su nombre es ‘em’ porque se basa en el tamaño de la letra eme, a menos que haya sido modificada por el usuario, normalmente este tamaño es de 16px.
+    - Medida por default de las etiquetas de texto: 16px.
+    - Se puede aplicar sobre fuentes
+    - Las medida em se MULTIPLICAN con el valor DEL PADRE.
+    - No tiene sentido setear em en el hijo si el padre no tiene un font size puesto EN PX.
+    - Una buena idea es fijar por ejemplo 1px al padre mayor de todos, por ejemplo al body y luego ir modificando a traves de la medida em cada cosa que querramos. Por ejemplo despues llamas a todos los h2 y pones 20em (1x20)
+
+
+- Medida relativa al padre 3 >> REM
+    - Sirve tambien para tamaños de fuente
+    - La unidad de medida rem es muy similar a em, con la única diferencia de que no es escalable, esto quiere decir que no depende del elemento padre, sino del elemento raíz del documento, el elemento HTML. Rem significa «Root Em«, o sea, es un em basado en la raíz.
+    - Es igual que em solo que aca se multiplica por el valor predeterminado del html que es 16px al menos que lo modifiquemos llamando en css a la etiqueta HTML.
+
+
+- Medida relativa a la ventana del navegador >> VH/VW
+    - Hace referencia al tamaño total del navegador, sea escritorio, sea celular o tablet.
+    - 10vh/vw es el 10% de la totalidad del vh/vw
+    - Se puede poner min height: 100vh por ejemplo
+
+
+
+RESPONSIVIDAD DE IMAGENES:
+    - Contener la imagen en un div o figure y en css modificar el width y height del contenedor. Ahi la caja puede ser mas grande o mas chica que la imagen entonces despues se tiene que llamar a la imagen y ponerle width: 100%. De esa manera la imagen se va a ajustar siempre al tamaño de la caja, la cual se puede modificar luego con media queries.
+
+    - Para "cortar" la imagen, a la imagen hay que ponerle objet-position: center y object-fit: cover
+
+    - Se pueden cortar los bordes de la imagen poniendole al contenedor las propiedades de border radius y overflow: hidden.
+
+
+PATRONES DE DISEÑO:
+
+*/
+

@@ -1,0 +1,47 @@
+/* 
+ARRAYS >> Es una coleccion de datos.
+
+- Es otro tipo de dato (como number, string, nan, etc)
+- Aparecen entre corchetes
+- Puede almacenar distintos tipos de datos combinados. Es decir un array puede tener un numero, un string, un nan, otro array, etc.
+
+- Se accede al elemento del array a traves del indice o posicion. Se pone entre corchetes y empieza desde el 0.
+
+- Para acceder a un elemento que esta adentro de un array que tambien esta adentro de un array se pone doble corchete. El primero para acceder al elemento del primer array y el segundo para el elemento dentro del array que esta adentro del array.
+
+- DECLARACION DE UN ARRAY:
+    - const miArray = [1, 2, 3, 4, 5];
+
+
+METODOS PARA LOS ARRAYS:
+- .push >> Agrega elementos al array ya declarado. Se puede poner mas de una cosa Ej: miArray.push("10"). 
+
+- .pop >> Elimina EL ULTIMO elemento. Ej: miArray.pop(). Eliminaria el 10 que se agrego antes.
+
+- .unshift >> Agrega un elemento AL COMIENZO del array. Se puede poner mas de una cosa Ej: miArray.unshift("15")
+
+- .shift >> Elimina el elemento del comienzo (el de la posicion 0). Ej: miArray.shift(). Elimina el 15.
+
+- .splice >> Elimina elementos en el medio del array. Recibe dos parametros, el primer parameto es en donde empieza a eliminar (tiene en cuenta el indice) y el segundo es la cantidad de elementos a eliminar. Ej: miArray.splice(2, 4). Esto cortaria desde el 2 hasta el 5.
+
+- .join >> Une o genera un string en base a los elementos del array. Debe crearse una nueva variable porque "se copia" la info del array original. Entre parentesis se debe poner lo que quiero que separe los elementos del array, puede ser una ,/-, etc. Ej: const nuevoArray = miArray.join("-"). Esto devolveria 1234510,etc.
+
+- .concat >> Une dos arrays que inicialmente estan separados. Debe crearse una nueva variable porque va a "copiar" los elementos de los dos arrays originales. Ej: const arrayConcatenado = miArray.concat(nombre del array que quiero concatenar)
+
+- .slice >> Genera la copia DE UNA PARTE de un array. Tambien debe crearse una nueva variable. Recibe dos parametros. El primero es desde donde empieza a cortar y el segundo es adonde termina de cortar pero NO LO INCLUYE. Ej: const arrayCortado = miArray(2,5). Me va a pasar el 2, 3 y 4.
+
+- .indexOf >> Devuelve el numero del indice de un elemento en un array. Por ejemplo si quisiera buscar a alguien adentro de un listado, la busco con el string. Solo devuelve el numero de indice del primer lugar, es decir si se repite, solo tiene en cuenta el primero. Ej miArray.indexOf("Agustina"). Si esta en mi array, devuelve el numero de la posicion en donde se ubica. Sino, aparece el numero en negativo
+
+- .includes >> Devuelve true or false. Es parecido al indexOf. Ej: miArray.includes("Agustina").
+- .reverse >> Da vuelta el orden del array. Lo que estaba en el lugar 10 va a pasar al 0 y asi sucesivamente.
+- .sort >> Convierte los valores de un array a string y en base a eso los ordena de menor a mayor. Sucede que si en una lista tenemos el numero 5, 1, 9, 80, el orden que deberia devolver es 1, 5, 9, 80, pero como es un string, el 8 va a venir antes que es 9.
+    - Para ordenar coherentemente esos numeros transformados a string se debe hacer lo siguiente:
+        Tenemos una variable que se llama numeros:   const numeros = [1,5,20,2,10,55,88]
+        numeros.sort(functios (a,b)){
+            return a - b
+        }
+
+    - Si usamos a - b, ordena de menor a mayor. Si usamos b - a, ordena de mayor a menor.
+
+[]
+*/

@@ -1,0 +1,54 @@
+
+/* SELECTORES DE ETIQUETAS
+    Es la forma de llamar a las etiquetas por su nombre de etiqueta, para modificar los estilos. */ 
+
+/* Siempre prevalece el ultimo valor (en caso de duplicado por ejemplo) */
+
+body {
+    margin: 0;
+    background-color: rgb(186, 105, 7);
+}
+
+
+h1{
+    color: brown;
+    background-color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 900;
+
+    text-align: center;
+}
+
+p{
+    color: aquamarine;
+    font-family: 'Roboto', sans-serif;
+
+    text-align: center;
+}
+
+
+
+/* SELECTORES DE CLASE
+    Identificados con ".", en la etiqueta debe haber una clase (class="")*/
+
+.p-color{
+    color: rgb(87, 3, 86);
+}
+
+
+
+/* SELECTOR DE IDENTIFICADOR 
+    Se identifica en el html como "id=" y en la hoja de css con #*/
+
+
+#parrafo-unico{
+    color: coral;
+}
+
+
+
+
+
+
+
+

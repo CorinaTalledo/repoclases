@@ -1,0 +1,122 @@
+
+
+/* FUNCIONES NATIVAS
+
+- Sirven para tratar strings y numeros, es decir se aplican sobre datos tipo texto y numeros.
+- Se declaran poniendo el nombre del dato, un . y el nombre de la funcion.
+
+
+- Ej: let mensaje = 'Hola chicas, esto es un mensaje'.
+
+
+1) PARA SABER EL LARGO DE UN STRING: LENGTH ¿Cuantos caracteres tiene el mensaje?
+    - Devuelve un numero
+    - Se debe poner: mensaje.length dentro del console.log para poder visualizarlo en la consola.
+    - console.log(mensaje.length);
+
+
+2) PARA PASAR TODO EL MENSAJE A MAYUSCULA. Con parentesis vacios
+    - Devuelve la misma cadena de caracteres, es decir un string
+    - console.log(mensaje.touppercase());
+
+
+3) PARA PASAR TODO EL MENSAJE A MINUSCULA: Con parentesis vacios
+    - Devuelve el mismo mensaje asi que es un string.
+    - console.log(mensaje.tolowercase);
+
+
+4) PARA CORTAR UNA CADENA DE CARACTERES: Con parentesis con datos
+    - Devuelve una cadeja de caracteres, es decir string.
+    - console.log(mensaje.slice(0,10));
+    - Lo que se pone entre parentesis son la posicion de inicio y de finalizacion. 
+    - El segundo parametro es opcional. Si se pone uno solo, el parametro que se esta poniendo es el de incio, es decir que cuenta desde esa posicion en adelante.
+        Ej: console.log(mensaje.slice(5)); Me va a mostrar el mensaje desde el 5to caracter en adelante.
+    - Ademas, el segundo parametro puede ser un numero negativo. En ese caso cuenta desde el primer parametro y corta la cantidad de caracteres que se pongan en el segundo parametro.
+        Ej: console.log(mensaje.slice(5, -2)); Me va a mostrar el mensaje desde el 5to caracter pero va a cortar los ultimos 2 caracteres.
+    - Se puede usar el length para concatenar y usar directamente esa contabilizacion.
+
+
+5) PARA SABER SI EL STRING INCLUYE ALGUN CARACTER ESPECIFICO:
+    - Devuelve un booleano (true or false)
+    - console.log(mensaje.includes('z')); 
+    - Puede servir para chequear por ejemplo la validacion de un email ya que en vez de la z, se puede poner un @.
+    - Se puede poner una palabra directamente.
+
+
+6) PARA SABER EL NUMERO DE POSICION DE LA PRIMERA COINCIDENCIA QUE ENCUENTRA: INDEXOF
+    - console.log(mensaje.indexof('a')); Aqui va a mostrar un numero
+    - Empieza a contar desde el 0. En este ejemplo mostraria un 3
+    - Si el numero que aparece es negativo, es que no encontro el caracter
+    - Se puede poner una palabra y te tira el numero de posicion de donde comienza la palabra.
+
+
+7) PARA REEMPLAZAR UNA PARTE DEL MENSAJE: Replace
+    - console.log(mensaje.replace('chicas', 'chiques'));
+    - Entre parentesis se deben poner dos parametros, el primero es la palabra o caracter a reemplazar y el segundo la palabra o caracter que quiero poner.
+    - Reemplaza solo la primer coincidencia.
+    - Si se quiere reemplazar todas las coincidencias, hay que poner replaceall();
+
+
+8) PARA CONVERTIR EL TIPO DE DATO A STRING.
+    - Ej: let telefono = 1148703055
+
+    - console.log(telefono.tostring); Me va a convertir el numero en string.
+    - Para corroborar que se convierta realmente en string se debe poner typof
+
+
+------------------
+
+Ej: let edad = 33
+
+    let edad1 = 5
+    let edad2 = 15
+    let edad3 = 21
+    let edad4 = 40
+
+9) NUMBER: PARA CONVERTIR UN DATO A TIPO NUMERO: 
+    - console.log(Number(telefono));
+
+
+10) MATH.RADOM: Devuelve un numero cualquiera, aleatorio entre 0 y 1.
+    - console.log(math.random); Va a devolver cualquier numero entre 0 y 1 cada vez que se actualice la web.
+
+
+11) MATH.MIN: Devuelve el valor mas pequeño entre los parametros que le pase entre parentesis.
+    - console.log(math.min(edad1, edad2, edad3, edad4));. Aqui me va a pasar 5
+
+
+12) MATH.MAX: Devuelve el valor mas alto entre los parametros que le pase entre parentesis. 
+    - console.log(math.max(edad1, edad2, edad3, edad4));. Aqui me va a pasar 5
+
+
+13) MATH.ROUND: Redondea un numero decimal al entero mas cercano.
+    - console.log(math.round(0.912354988));
+
+
+14) MATH.CEIL: Redondea un numero decimal hacia arriba.
+    - console.log(math.round(0.912354988));
+
+
+15) MATH.FLOOR: Redondea un numero decimal hacia abajo.
+    - console.log(math.round(0.912354988));
+
+
+16) NUMBER.ISNAN: Tira true or false segun si el parametro es o no un numero.
+    - console.log(number.isnan())
+    - Falso: Esta diciendo que NO ES UN NO NUMERO.
+    - Verdadero: Esta diciendo que SI ES UN NO NUMERO
+
+
+17) SPLIT: Corta y separa el contenido del string en renglones en la consola.
+    - console.log (mensaje.split('lo que sea que quiero que la funcion tome para cortar'));
+
+
+*/
+
+
+
+
+
+
+
+

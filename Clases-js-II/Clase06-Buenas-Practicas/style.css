@@ -1,0 +1,68 @@
+/* 
+
+MAS BUCLES:
+
+1) FOR EACH >> Recorre un array elemento por elemento pero, a diferencia del for y for of, permite conocer el indice del elemento. 
+    - Se aplica como si fuera un metodo.
+    - Puede tener hasta 3 parametros: el elemento a ser evaluado. El index si es que queremos ver la posicion del elemento. El array a evaluar. De esta manera se ve toda la informacion de lo que queremos evaluar.
+
+
+    - Ejemplo:  const letras = ["a", "b", "c"];
+
+                letras.forEach((element, index, array) => {
+                console.log(element, index);
+                });
+
+
+----------------
+for (let i = 0; i < letras.length; i++) {
+console.log(letras[i]);
+}
+----------------
+
+
+2) WHILE >> Es un bucle independiente y siempre se va a ejecutar mientras se cumpla la condicion entre parentesis.
+    - Se debe poner un contador que en este caso esta siendo declarado aparte para que no genere un loop constante.
+
+    - Ejemplo : let numero = 0;
+
+                while (numero < 5) {
+                    console.log(numero);
+                    numero++;
+                }
+
+    - La sentencia se va a ejecutar mientras que la condicion se cumpla. Es decir, en tanto numero sea menor a 5, se ejecuta.
+
+
+3) DO WHILE >> Crea un bucle que ejecuta una sentencia especificada, hasta que la condición de comprobación se evalúa como falsa. La condición se evalúa después de ejecutar la sentencia, dando como resultado que la sentencia especificada se ejecute al menos una vez.
+    - Primero ejecuta la funcion y despues chequea. Entonces hace i = i+i, en donde i es 6 y luego se fija si cumple la condicion, en este caso que sea menor a 5. 
+
+let result = "hola ";
+let i = 6;
+
+do {
+    i = i + 1; 
+    result = result + i;  //7'
+} while (i < 5);
+
+console.log(result);
+
+
+-----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

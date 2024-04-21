@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container column">
+        <div class="columns">
+            <h1 class="column is-size-1">
+                Estado del tiempo en
+
+                <select class="is-size-1 has-text-danger" id="city">
+                    <option value="Buenos Aires" selected>Buenos Aires</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Londres">Londres</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Sydney">Sydney</option>
+                    <option value="Nueva York">Nueva York</option>
+                    <option value="Estambul">Estambul</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                </select>
+                
+                <span class="is-size-1 has-text-danger" id="place"></span>
+            </h1>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <h3 class="is-size-3">
+                    Temperatura actual
+                </h3>
+
+                <div>
+                    <span class="is-size-3" id="current-temp"></span>
+
+                    <i class="fa-solid fa-temperature-half is-size-1"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <h3 class="is-size-3">
+                    Temperatura mínima
+                </h3>
+
+                <div>
+                    <span class="is-size-3" id="min-temp"></span>
+
+                    <i class="fa-solid fa-temperature-arrow-down is-size-3"></i>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3 class="is-size-3">
+                    Temperatura máxima
+                </h3>
+
+                <div>
+                    <span class="is-size-3" id="max-temp"></span>
+
+                    <i class="fa-solid fa-temperature-arrow-up is-size-3"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <h3 class="is-size-3">
+                    Humedad
+                </h3>
+
+                <div>
+                    <span class="is-size-3" id="humidity"></span>
+
+                    <i class="fa-solid fa-droplet is-size-3"></i>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3 class="is-size-3">
+                    Viento
+                </h3>
+
+                <div>
+                    <span class="is-size-3" id="wind"></span>
+
+                    <i class="fa-solid fa-wind is-size-3"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="api.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
